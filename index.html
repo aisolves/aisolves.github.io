@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#092b3a">
-  <meta name="description" content="AI 有解｜生活工具實驗室。分享免費、可直接使用的 AI 生活工具，包括台中高鐵轉乘攻略與苗栗高鐵 × 竹南轉乘查詢。">
+  <meta name="description" content="AI 有解｜生活工具實驗室。分享免費、可直接使用的 AI 生活工具，包括高鐵轉乘、雙鐵追蹤，以及租屋與重要郵件監控設定教學。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI 有解｜生活工具實驗室">
   <meta property="og:description" content="不只會用 AI，更要讓 AI 為生活做點事。免費探索高鐵轉乘與生活工具。">
@@ -19,6 +19,8 @@
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr;min-height:initial;gap:22px;padding:65px 0}.hero-demo{max-width:590px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{grid-template-columns:1fr;gap:26px}.about-art{min-height:260px}.contact-inner{flex-direction:column;align-items:flex-start}}
     @media(max-width:650px){.container{width:min(100% - 32px,1120px)}.nav{min-height:66px}.brand{font-size:14px}.mark{width:42px;height:42px}.mobile-menu{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#072c3b;padding:14px 19px 22px;flex-direction:column;align-items:stretch;gap:3px;box-shadow:0 13px 17px #001c2a3a}.nav-links.open{display:flex}.nav-links a{padding:10px 7px}.hero-inner{padding:56px 0}.hero p{font-size:15px}.hero-demo{padding:16px}.section{padding:55px 0}.section-title{align-items:flex-start;flex-direction:column;gap:8px}.cards{grid-template-columns:1fr}.tool{min-height:270px}.contact-inner{padding:27px}.footer-inner{flex-direction:column;gap:4px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+    .guides{background:#edf6f3}.guide-intro,.guide-tip{background:#e0f2ed;border-left:4px solid #11998b;padding:17px 20px;border-radius:12px;font-size:14px;margin:0 0 22px}.guide{background:white;border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;scroll-margin-top:100px}.guide summary{cursor:pointer;padding:22px 24px;font-size:21px;font-weight:800}.guide summary small{display:block;font-size:14px;color:var(--muted);font-weight:400;margin-left:22px}.guide-body{padding:0 24px 24px}.guide-steps{padding-left:23px}.guide-steps li{padding:0 0 16px 6px}.guide-steps strong{color:var(--navy)}.guide-form{padding:24px;background:#f7faf9;border:1px solid var(--line);border-radius:14px;margin:12px 0 22px}.guide-form h3{margin-top:0;font-size:20px}.guide-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.guide-fields label,.prompt-label{display:block;font-size:14px;font-weight:750}.guide-fields input,.guide-fields select,.prompt{width:100%;font:inherit;background:white;border:1px solid #b9cfcc;border-radius:8px;padding:11px;color:var(--text);margin-top:7px;min-width:0}.guide-fields select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath d='m5 7 5 5 5-5' fill='none' stroke='%23193540' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}.prompt-label{margin-top:20px}.prompt{font-size:16px;line-height:1.8;resize:vertical;min-height:200px}.guide-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px}.copy-status{font-size:14px;color:#0b7067}.guide-help{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:24px}.guide-help h3{margin-top:0}.guide-help p,.guide-help li{font-size:14px}.guide-sources a{text-decoration:underline;text-underline-offset:3px}.guide-tip{margin-bottom:0}.guide-fields input:focus,.guide-fields select:focus,.prompt:focus{outline:3px solid #a3dfd1;outline-offset:2px}@media(max-width:650px){.guide-fields{grid-template-columns:1fr}.guide summary{padding:19px;font-size:19px}.guide-body{padding:0 16px 20px}.guide-form,.guide-help{padding:17px}}
   </style>
 </head>
 <body>
@@ -27,7 +29,7 @@
   <div class="container nav">
     <a class="brand" href="#home" aria-label="AI 有解首頁"><span class="mark" aria-hidden="true">✳</span><span>AI 有解<small>AI SOLVES · 生活工具實驗室</small></span></a>
     <button class="mobile-menu" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="開啟導覽選單">☰</button>
-    <nav class="nav-links" id="navLinks" aria-label="主要導覽"><a href="#home">首頁</a><a href="#tools">免費工具庫</a><a href="#about">品牌介紹</a><a href="#contact">工具建議</a><a class="nav-cta" href="#tools">探索工具 ↗</a></nav>
+    <nav class="nav-links" id="navLinks" aria-label="主要導覽"><a href="#home">首頁</a><a href="#tools">免費工具庫</a><a href="#guides">設定教學</a><a href="#about">品牌介紹</a><a href="#contact">工具建議</a><a class="nav-cta" href="#tools">探索工具 ↗</a></nav>
   </div>
 </header>
 <main id="main">
@@ -36,7 +38,7 @@
     <div class="hero-demo" aria-label="高鐵轉乘比較示範"><div class="demo-head">🚄 特色工具 · 高鐵快轉</div><div class="demo-card"><div class="demo-route"><span>苗栗 → 台南</span><span class="pill">案例示意</span></div><div class="demo-desc">直達與轉乘，哪個更適合？</div><div class="compare"><span>直達　07:58 → 09:11</span><strong>73 分鐘</strong></div><div class="compare"><span>台中轉乘　08:25 → 09:32</span><strong>67 分鐘</strong></div></div><div class="demo-foot">較晚出發 <strong>27 分鐘</strong> · 旅程短 <strong>6 分鐘</strong></div><div class="disclaimer">以上為既有案例，非即時車次。搭乘前請查核官方時刻表。</div><div class="buttons"><a class="btn btn-primary" href="https://hsr-taichung-guide.peachy-harp-9875.chatgpt.site/" target="_blank" rel="noopener noreferrer">開啟高鐵快轉 ↗</a></div></div>
   </div></section>
   <section class="section" id="tools"><div class="container">
-    <div class="section-title"><div><span class="kicker">TOOL LIBRARY</span><h2>免費工具庫</h2><p class="sub">免下載 App，公開工具可直接開啟；個人追蹤工具需登入並具備存取權限。</p></div><span class="count" id="toolCount" aria-live="polite">共 6 項工具與計畫</span></div>
+    <div class="section-title"><div><span class="kicker">TOOL LIBRARY</span><h2>免費工具庫</h2><p class="sub">免下載 App，公開工具可直接開啟；個人追蹤工具需登入並具備存取權限。</p></div><span class="count" id="toolCount" aria-live="polite">共 8 項工具與計畫</span></div>
     <div class="filter-bar" role="group" aria-label="工具分類"><button type="button" class="filter" data-filter="all" aria-pressed="true">全部</button><button type="button" class="filter" data-filter="transport" aria-pressed="false">🚄 交通轉乘</button><button type="button" class="filter" data-filter="life" aria-pressed="false">📦 生活管理</button></div>
     <div class="cards" id="toolCards">
       <article class="tool featured" data-category="transport"><div class="tool-top"><div class="tool-icon" aria-hidden="true">🚄</div><span class="status">● 可立即使用</span></div><h3>高鐵快轉｜台中轉乘攻略</h3><p>比較直達與台中轉乘的南北向高鐵班次，對照出發、抵達及整段旅程時間，找到更適合你的方案。</p><div class="tool-action"><a class="btn btn-dark" href="https://hsr-taichung-guide.peachy-harp-9875.chatgpt.site/" target="_blank" rel="noopener noreferrer" aria-label="開啟高鐵快轉｜台中轉乘攻略（另開新分頁）">立即使用 ↗</a></div></article>
@@ -45,8 +47,59 @@
       <article class="tool" data-category="transport"><div class="tool-top"><div class="tool-icon" aria-hidden="true">🚗</div><span class="status pending">公開版規劃中</span></div><h3>竹南 ↔ 台南通勤比較</h3><p>比較自駕、高鐵與跨運具接駁的時間和費用。正在規劃不含個人行程資料的公開版本。</p><span class="muted-action">尚未提供公開入口</span></article>
       <article class="tool" data-category="life"><div class="tool-top"><div class="tool-icon" aria-hidden="true">🚲</div><span class="status pending">公開版規劃中</span></div><h3>YouBike 車況紀錄</h3><p>依日期、時段記錄站點可借車數，找出歷史高峰與低谷。非官方即時車輛資訊。</p><span class="muted-action">尚未提供公開入口</span></article>
       <article class="tool" data-category="life"><div class="tool-top"><div class="tool-icon" aria-hidden="true">📦</div><span class="status pending">公開版規劃中</span></div><h3>購物物流追蹤器</h3><p>整理不同平台的訂單和物流狀態；如推出公開版，將移除私人交易及帳戶資料。</p><span class="muted-action">尚未提供公開入口</span></article>
+
+      <article class="tool" data-category="life"><div class="tool-top"><div class="tool-icon" aria-hidden="true">🏠</div><span class="status">設定教學</span></div><h3>租屋訊息監控</h3><p>設定地區、預算、房型與必要條件，定期尋找符合的新物件。教你驗證資料來源、排除重複刊登，並在有新結果時收到通知。</p><div class="tool-action"><a class="btn btn-dark" href="#guide-rental">租屋監控怎麼設</a></div></article>
+      <article class="tool" data-category="life"><div class="tool-top"><div class="tool-icon" aria-hidden="true">📬</div><span class="status">設定教學</span></div><h3>重要郵件監控</h3><p>連結自己的信箱，依工作、帳單、待回覆與期限篩選重要新郵件。提供連線測試、通知規則與可直接修改的指令範本。</p><div class="tool-action"><a class="btn btn-dark" href="#guide-mail">郵件監控怎麼設</a></div></article>
     </div>
     <div class="notice"><strong>交通資訊提醒：</strong>轉乘建議需依查詢日期與官方時刻表確認；實際營運、誤點、月台、步行時間及座位狀況可能影響銜接。本站為個人 AI 工具分享平台，非台灣高鐵或台鐵官方網站。</div>
+  </div></section>
+
+  <section class="section guides" id="guides"><div class="container">
+    <div class="section-title"><div><span class="kicker">SET UP YOUR OWN MONITOR</span><h2>把監控設定好，才會收到通知。</h2><p class="sub">先確認來源可讀取，再測試、建立排程。這裡提供教學與指令範本。</p></div></div>
+    <div class="guide-intro">本站是工具介紹與設定教學，不會因為開啟此頁就自動監控。請在你自己的 ChatGPT 帳戶完成連線、測試與任務建立，並確認排程成功。</div>
+    <details class="guide" id="guide-rental" open><summary><span>🏠 租屋訊息監控</span><small>條件、來源、測試與排程</small></summary><div class="guide-body">
+      <ol class="guide-steps">
+        <li><strong>列出找房條件。</strong>填寫地區、租金上限、房型、入住時間；再補上電梯、停車、可開伙等必要條件。說清楚租金是否包含管理費與停車費。</li>
+        <li><strong>指定可查詢的來源。</strong>提供租屋搜尋結果網址或公開物件連結。先請 ChatGPT 確認能讀取；若來源需要登入、驗證或限制自動查詢，改用該平台可用的新物件通知，再讓已授權的郵件監控協助篩選。</li>
+        <li><strong>先跑一次，不急著排程。</strong>請列出當下符合的物件、租金、地區、刊登日期與原始連結；無法核實的欄位標示未知。先建立已見物件清單，避免把舊物件當成新上架。</li>
+        <li><strong>建立任務並開啟通知。</strong>確認你的帳戶支援所選頻率及資料來源後，再要求定期檢查；例如每天一次，或支援時每小時一次。到 Scheduled／排程確認任務已啟用，並在設定 → 通知開啟需要的推播或電子郵件通知。</li>
+      </ol>
+      <div class="guide-form" aria-label="租屋監控指令產生器">
+        <h3>填條件，產生你的設定指令</h3>
+        <div class="guide-fields">
+          <label>搜尋地區<input id="rent-area" maxlength="100" placeholder="例如：台南市新市區、善化區"></label>
+          <label>每月租金上限<input id="rent-budget" maxlength="80" placeholder="例如：12,000 元，含管理費"></label>
+          <label>房型與必要條件<input id="rent-needs" maxlength="300" placeholder="例如：獨立套房、電梯、汽車停車位"></label>
+          <label>搜尋網址或資料來源<input id="rent-source" maxlength="500" placeholder="貼上租屋搜尋結果網址"></label>
+          <label>檢查頻率<select id="rent-frequency"><option>每天上午 9 點</option><option>每 1 小時（需帳戶支援）</option></select></label>
+        </div>
+        <label class="prompt-label" for="rent-prompt">可複製指令</label><textarea id="rent-prompt" class="prompt" readonly rows="9"></textarea>
+        <div class="guide-actions"><button type="button" class="btn btn-dark copy-prompt" data-copy="rent-prompt">複製租屋指令</button><span class="copy-status" aria-live="polite"></span></div>
+      </div>
+      <div class="guide-tip"><strong>完成檢查：</strong>來源能讀取、條件判斷正確、任務顯示啟用、通知權限已開啟。有新物件才提醒，同物件不重複提醒；查詢失敗應回報，不能當作「沒有新物件」。</div>
+    </div></details>
+    <details class="guide" id="guide-mail"><summary><span>📬 重要郵件監控</span><small>連結信箱、訂規則、驗證通知</small></summary><div class="guide-body">
+      <ol class="guide-steps">
+        <li><strong>先連結自己的信箱。</strong>在 ChatGPT 設定 → Plugins／外掛程式，或該版本顯示的 Apps／應用程式中，選擇可用的郵件服務，例如 Gmail，完成帳戶授權。服務是否可用依帳戶、地區與工作區而定。</li>
+        <li><strong>iCloud Mail 另行設定。</strong>若帳戶提供 iCloud Mail 連線，使用 iCloud 郵件地址及 Apple「App 專用密碼」，只在官方連線表單輸入；不要把 Apple 主密碼或 App 專用密碼貼到聊天或本站。</li>
+        <li><strong>定義什麼算重要。</strong>選擇工作與聘僱、帳單與付款、需回覆、緊急與期限。可加上重要寄件者、主旨關鍵字與排除項目；同時說明是否包含已讀但仍待處理的郵件。</li>
+        <li><strong>先測試讀取與分類。</strong>請 ChatGPT 查詢最近一天的郵件，回傳寄件者、主旨、重要原因、期限與信件連結。核對讀取的是正確帳戶，確認促銷與垃圾郵件沒有被誤列。</li>
+        <li><strong>確認排程與通知。</strong>確認帳戶支援後建立定期檢查，並到 Scheduled／排程與設定 → 通知核對啟用狀態。若使用支援的 Gmail 事件觸發，另須確認觸發條件；只有連結信箱不代表任務已建立。</li>
+      </ol>
+      <div class="guide-form" aria-label="重要郵件監控指令產生器">
+        <h3>填規則，產生你的設定指令</h3>
+        <div class="guide-fields">
+          <label>已連結的信箱<input id="mail-accounts" maxlength="250" placeholder="例如：我的 Gmail、工作信箱"></label>
+          <label>監控重點<input id="mail-priority" maxlength="300" placeholder="例如：工作、帳單、需回覆、緊急期限"></label>
+          <label>排除內容<input id="mail-exclude" maxlength="250" placeholder="例如：一般促銷、電子報、垃圾郵件"></label>
+          <label>檢查頻率<select id="mail-frequency"><option>每 1 小時（需帳戶支援）</option><option>每天上午 9 點</option></select></label>
+        </div>
+        <label class="prompt-label" for="mail-prompt">可複製指令</label><textarea id="mail-prompt" class="prompt" readonly rows="9"></textarea>
+        <div class="guide-actions"><button type="button" class="btn btn-dark copy-prompt" data-copy="mail-prompt">複製郵件指令</button><span class="copy-status" aria-live="polite"></span></div>
+      </div>
+      <div class="guide-tip"><strong>通知規則：</strong>只通知新增且需要注意或採取行動的信件，附上原因、期限與原信連結，避免同一封信重複通知。監控以讀取與摘要為主；寄信、刪信或變更標籤需另行指示。</div>
+    </div></details>
+    <div class="guide-help"><h3>已設定，卻沒有通知？</h3><ul><li>先查看任務是否真的建立並啟用，是否等待授權、暫停或已達方案上限。</li><li>檢查網站是否仍能查詢、郵件帳戶是否仍連線，以及上次執行結果。</li><li>確認手機、瀏覽器與 ChatGPT 的通知權限，並執行一次測試。只有「任務已建立」不等於已成功讀到資料。</li></ul><p>本頁表單僅在瀏覽器產生指令，不會將欄位送到本站伺服器，也不會自動啟用任務。請複製到你自己的 ChatGPT 對話中使用。</p><p class="guide-sources">官方說明：<a href="https://help.openai.com/en/articles/20001494-connecting-and-managing-app-accounts-in-chatgpt" target="_blank" rel="noopener noreferrer">連結應用程式帳戶</a> · <a href="https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt" target="_blank" rel="noopener noreferrer">排程與通知設定</a>。功能與限制請以你的帳戶及官方最新說明為準。</p></div>
   </div></section>
   <section class="section about" id="about"><div class="container about-grid">
     <div class="about-art"><div class="big-mark" aria-hidden="true">✳</div><h2>AI 有解</h2><p>不只會用 AI，<br>更要讓 AI 為生活做點事。</p></div>
@@ -69,6 +122,40 @@
       let n=0;cards.forEach(card=>{const show=btn.dataset.filter==='all'||card.dataset.category===btn.dataset.filter;card.hidden=!show;if(show)n++});
       count.textContent=`顯示 ${n} 項工具與計畫`;
     }));
+
+    function rentalPrompt(){
+      const val=(id,fallback)=>document.getElementById(id).value.trim()||fallback;
+      document.getElementById('rent-prompt').value=`請幫我設定租屋新物件監控。
+地區：${val('rent-area','【填入地區】')}
+租金上限：${val('rent-budget','【填入預算及是否包含管理費、停車費】')}
+房型與必要條件：${val('rent-needs','【填入房型、入住時間及必要條件】')}
+資料來源：${val('rent-source','【填入可查詢的搜尋網址】')}
+頻率：${val('rent-frequency','每天上午9點')}，時區 Asia/Taipei。
+請先確認來源可讀取，執行一次測試並建立已見物件清單；無法取得的資料請明確說明。測試成功且帳戶支援後才建立排程，並確認任務已啟用。
+僅在出現符合條件的新物件或既有物件有重要更新時通知；以物件ID或網址去重。附租金、地區、已核實的條件、刊登日期與原始連結，未知欄位不推測。查詢失敗請回報，不要視為沒有新物件。`;
+    }
+    function mailPrompt(){
+      const val=(id,fallback)=>document.getElementById(id).value.trim()||fallback;
+      document.getElementById('mail-prompt').value=`請幫我設定重要郵件監控。
+已連結帳戶：${val('mail-accounts','【填入已授權的信箱】')}
+監控重點：${val('mail-priority','工作與聘僱、帳單與付款、需要回覆、緊急與期限')}
+排除內容：${val('mail-exclude','一般促銷、電子報與垃圾郵件')}
+頻率：${val('mail-frequency','每1小時')}，時區 Asia/Taipei。
+先確認能讀取正確帳戶，查詢最近一天郵件做分類測試。測試成功且帳戶支援後才建立排程，並確認任務已啟用。
+僅在有新的重要且需要我注意或採取行動的信件時通知。提供寄件者、主旨、重要原因、需採取的行動、期限與原信連結；以信件ID避免重複通知。無符合信件時保持安靜，讀取失敗請明確回報。
+本任務只讀取與摘要，不代寄、不刪信、不變更標籤。`;
+    }
+    ['rent-area','rent-budget','rent-needs','rent-source','rent-frequency'].forEach(id=>document.getElementById(id).addEventListener('input',rentalPrompt));
+    ['mail-accounts','mail-priority','mail-exclude','mail-frequency'].forEach(id=>document.getElementById(id).addEventListener('input',mailPrompt));
+    rentalPrompt();mailPrompt();
+    document.querySelectorAll('.copy-prompt').forEach(btn=>btn.addEventListener('click',async()=>{
+      const field=document.getElementById(btn.dataset.copy),status=btn.parentElement.querySelector('.copy-status');
+      try{await navigator.clipboard.writeText(field.value);status.textContent='已複製，請貼到自己的 ChatGPT 對話。';}
+      catch{field.focus();field.select();status.textContent='已選取文字，請手動複製。';}
+    }));
+    function revealGuide(){const target=document.getElementById(location.hash.slice(1));if(target&&target.matches('details.guide'))target.open=true;}
+    window.addEventListener('hashchange',revealGuide);revealGuide();
+
     document.getElementById('year').textContent=new Date().getFullYear();
   })();
 </script>
