@@ -21,6 +21,17 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 
     .guides{background:#edf6f3}.guide-intro,.guide-tip{background:#e0f2ed;border-left:4px solid #11998b;padding:17px 20px;border-radius:12px;font-size:14px;margin:0 0 22px}.guide{background:white;border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;scroll-margin-top:100px}.guide summary{cursor:pointer;padding:22px 24px;font-size:21px;font-weight:800}.guide summary small{display:block;font-size:14px;color:var(--muted);font-weight:400;margin-left:22px}.guide-body{padding:0 24px 24px}.guide-steps{padding-left:23px}.guide-steps li{padding:0 0 16px 6px}.guide-steps strong{color:var(--navy)}.guide-form{padding:24px;background:#f7faf9;border:1px solid var(--line);border-radius:14px;margin:12px 0 22px}.guide-form h3{margin-top:0;font-size:20px}.guide-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.guide-fields label,.prompt-label{display:block;font-size:14px;font-weight:750}.guide-fields input,.guide-fields select,.prompt{width:100%;font:inherit;background:white;border:1px solid #b9cfcc;border-radius:8px;padding:11px;color:var(--text);margin-top:7px;min-width:0}.guide-fields select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath d='m5 7 5 5 5-5' fill='none' stroke='%23193540' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}.prompt-label{margin-top:20px}.prompt{font-size:16px;line-height:1.8;resize:vertical;min-height:200px}.guide-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px}.copy-status{font-size:14px;color:#0b7067}.guide-help{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:24px}.guide-help h3{margin-top:0}.guide-help p,.guide-help li{font-size:14px}.guide-sources a{text-decoration:underline;text-underline-offset:3px}.guide-tip{margin-bottom:0}.guide-fields input:focus,.guide-fields select:focus,.prompt:focus{outline:3px solid #a3dfd1;outline-offset:2px}@media(max-width:650px){.guide-fields{grid-template-columns:1fr}.guide summary{padding:19px;font-size:19px}.guide-body{padding:0 16px 20px}.guide-form,.guide-help{padding:17px}}
+
+    /* 社群互動與提問 */
+    .community{background:#fff}.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:25px}
+    .community-panel{background:#f5faf8;border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:var(--shadow)}
+    .community-panel h3{margin:0 0 10px;font-size:22px}.community-panel p{color:var(--muted);font-size:14px;margin:0 0 17px}
+    .reactions{display:flex;flex-wrap:wrap;gap:15px;align-items:center}.reaction-item{padding:12px;background:#fff;border:1px solid var(--line);border-radius:14px;min-width:130px}
+    .reaction-item strong{font-size:14px;display:block;margin-bottom:6px}.reaction-item .counterapi{min-height:44px}
+    .community-hint{font-size:12px!important;margin-top:16px!important}.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .contact-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid #b7d9d4;border-radius:11px;padding:10px 14px;font-weight:750;background:#fff}
+    .contact-link:hover{background:#ddf7ef}.small-note{font-size:12px;color:var(--muted)}
+    @media(max-width:720px){.community-grid{grid-template-columns:1fr}.community-panel{padding:21px}}
   </style>
 </head>
 <body>
@@ -29,7 +40,7 @@
   <div class="container nav">
     <a class="brand" href="#home" aria-label="AI 有解首頁"><span class="mark" aria-hidden="true">✳</span><span>AI 有解<small>AI SOLVES · 生活工具實驗室</small></span></a>
     <button class="mobile-menu" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="開啟導覽選單">☰</button>
-    <nav class="nav-links" id="navLinks" aria-label="主要導覽"><a href="#home">首頁</a><a href="#tools">免費工具庫</a><a href="#guides">設定教學</a><a href="#about">品牌介紹</a><a href="#contact">工具建議</a><a class="nav-cta" href="#tools">探索工具 ↗</a></nav>
+    <nav class="nav-links" id="navLinks" aria-label="主要導覽"><a href="#home">首頁</a><a href="#tools">免費工具庫</a><a href="#guides">設定教學</a><a href="#about">品牌介紹</a><a href="#contact">聯絡與提問</a><a class="nav-cta" href="#tools">探索工具 ↗</a></nav>
   </div>
 </header>
 <main id="main">
@@ -106,7 +117,29 @@
     <div class="about-art"><div class="big-mark" aria-hidden="true">✳</div><h2>AI 有解</h2><p>不只會用 AI，<br>更要讓 AI 為生活做點事。</p></div>
     <div class="about-copy"><span class="kicker">ABOUT AI SOLVES</span><h2>從真實需求出發，做出真正用得到的工具。</h2><p>AI 有解是一個分享 AI 實作成果的生活工具實驗室。我們不只介紹 AI 能做什麼，更把通勤、轉乘、生活管理中的問題，變成可以親自操作的網頁工具。</p><div class="steps"><div class="step"><span class="step-num">1</span><div><strong>發現問題</strong><small>觀察生活中反覆遇到的麻煩與需求。</small></div></div><div class="step"><span class="step-num">2</span><div><strong>利用 AI 製作</strong><small>開發能查詢、比較、協助判斷的互動工具。</small></div></div><div class="step"><span class="step-num">3</span><div><strong>分享與優化</strong><small>公開可以使用的成果，持續改進操作體驗。</small></div></div></div></div>
   </div></section>
-  <section class="section" id="contact"><div class="container"><div class="contact-inner"><div><span class="eyebrow">WHAT SHOULD WE BUILD NEXT?</span><h2>下一個生活工具，你想解決什麼問題？</h2><p>歡迎在「AI 有解」的 Instagram 貼文留言分享想法。</p></div><a class="btn btn-primary" href="#tools">先試試免費工具 ↗</a></div></div></section>
+  <section class="section community" id="contact"><div class="container">
+    <div class="section-title"><div><span class="kicker">COMMUNITY & FEEDBACK</span><h2>喜歡 AI 有解？歡迎按讚、提問！</h2><p class="sub">你的回饋，會成為下一個實用小工具的靈感。</p></div></div>
+    <div class="community-grid">
+      <div class="community-panel">
+        <h3>👍 支持我們　💗 喜歡這個網站</h3>
+        <p>點選喜歡的表情，支持 AI 有解繼續分享免費工具。數字為所有訪客的公開累積票數。</p>
+        <div class="reactions">
+          <div class="reaction-item"><strong>👍 實用，按個讚</strong><div class="counterapi" ns="aisolves.github.io" action="vote" key="homepage-thumbs-up" behavior="vote" icon="thumbs-up" label="讚" bg="#e4f8f3" color="#073d42" iconColor="#088d7d" noLink="true" noAnim="true" style="min-height:44px"></div></div>
+          <div class="reaction-item"><strong>💗 喜歡 AI 有解</strong><div class="counterapi" ns="aisolves.github.io" action="vote" key="homepage-heart" behavior="vote" icon="heart" label="喜歡" bg="#fff0f3" color="#713044" iconColor="#e4577b" noLink="true" noAnim="true" style="min-height:44px"></div></div>
+        </div>
+        <p class="community-hint">計數由第三方 CounterAPI 提供；如被瀏覽器隱私設定阻擋，可能暫時無法顯示。票數為社群互動參考，並非獨立人數。</p>
+      </div>
+      <div class="community-panel">
+        <h3>💬 有問題？歡迎告訴我們</h3>
+        <p>遇到轉乘工具問題、發現資料錯誤，或想提議新功能，都可以提交問題。我們會在公開問題區集中回覆與追蹤。</p>
+        <div class="contact-actions">
+          <a class="btn btn-dark" href="https://github.com/aisolves/aisolves.github.io/issues/new?template=question.yml" target="_blank" rel="noopener noreferrer">✍️ 我要發問 ↗</a>
+          <a class="contact-link" href="https://github.com/aisolves/aisolves.github.io/issues" target="_blank" rel="noopener noreferrer">查看問題與回覆 ↗</a>
+        </div>
+        <p class="community-hint">提問需免費 GitHub 帳號登入；問題與回覆會公開。請勿填入電話、個人行程、帳密或其他敏感資料。</p>
+      </div>
+    </div>
+  </div></section>
 </main>
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> AI 有解 · AI Solves</span><span>讓 AI 為生活做點事 · <a href="#home">回到頂端 ↑</a></span></div></footer>
 <script>
@@ -160,5 +193,6 @@
     document.getElementById('year').textContent=new Date().getFullYear();
   })();
 </script>
+<script src="https://counterapi.com/c.js?ns=aisolves.github.io" async defer></script>
 </body>
 </html>
