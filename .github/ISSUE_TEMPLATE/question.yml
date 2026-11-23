@@ -1,0 +1,35 @@
+name: "💬 問題回報與功能建議"
+description: "向 AI 有解詢問工具使用問題、回報錯誤或提出新功能"
+title: "[網友提問] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝使用 AI 有解！本提問與回覆將會公開。
+        **請勿提供電話、帳號、密碼、身分證字號、精確個人行程或其他敏感資料。**
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類型
+      options:
+        - 工具使用問題
+        - 資料或班次有誤
+        - 新工具／新功能建議
+        - 網站操作問題
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: 涉及哪個工具？（選填）
+      placeholder: 例如：高鐵台中轉乘查詢
+  - type: textarea
+    id: details
+    attributes:
+      label: 問題或建議內容
+      description: 請描述遇到的情況或希望新增的功能。
+      placeholder: 請清楚描述問題，必要時附上不含個資的畫面。
+    validations:
+      required: true
